@@ -693,6 +693,10 @@
       background: linear-gradient(90deg, var(--g), var(--a1))
     }
 
+    .pb6::before {
+      background: linear-gradient(90deg, var(--a1), var(--a3))
+    }
+
     .pcard:hover {
       border-color: rgba(99, 179, 237, .28);
       transform: translateY(-6px) scale(1.01);
@@ -727,6 +731,10 @@
       color: var(--g)
     }
 
+    .pb6 .pdomain {
+      color: var(--a1)
+    }
+
     .pcard h3 {
       font-family: var(--ff);
       font-size: 1.1rem;
@@ -745,30 +753,37 @@
 
     .metrics {
       display: flex;
-      gap: .75rem;
-      flex-wrap: wrap;
+      gap: .6rem;
       margin-bottom: 1.1rem
     }
 
     .met {
+      flex: 1 1 0;
+      min-width: 0;
       background: rgba(255, 255, 255, .05);
       border: 1px solid rgba(255, 255, 255, .08);
       border-radius: 8px;
-      padding: 7px 11px;
+      padding: 7px 6px;
       text-align: center
     }
 
     .mv {
       font-family: var(--ff);
-      font-size: .95rem;
+      font-size: .9rem;
       font-weight: 700;
       color: #fff;
-      display: block
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
     }
 
     .ml {
-      font-size: .68rem;
-      color: var(--f)
+      font-size: .67rem;
+      color: var(--f);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
     }
 
     .ptags {
@@ -1375,7 +1390,7 @@
           Passionate about AI-driven applications, automation workflows, and scalable cloud architectures.</p>
         <div class="hstats">
           <div class="hstat">
-            <div class="num">5+</div>
+            <div class="num">6+</div>
             <div class="lbl">Projects Built</div>
           </div>
           <div class="hstat">
@@ -1490,7 +1505,7 @@
             <div style="margin-top:.7rem">
               <div class="cert-item"><span class="cert-ic">&#9733;</span> Flash Infolabs &mdash; AWS Cloud Engineering
                 (1 month)</div>
-              <div class="cert-item"><span style="color:var(--g)">&#10003;</span> 6 Public GitHub Repositories with
+              <div class="cert-item"><span style="color:var(--g)">&#10003;</span> 7 Public GitHub Repositories with
                 end-to-end projects</div>
             </div>
           </div>
@@ -1576,7 +1591,7 @@
     })();
 
     /* ===== Typewriter ===== */
-    var roles = ['AI & Software Developer', 'ML Engineer', 'Data Analyst', 'Problem Solver'];
+    var roles = ['AI & Software Developer',"Python & Django Developer", 'ML Engineer', 'Data Analyst', 'Problem Solver'];
     var ri = 0, ci = 0, deleting = false;
     function tw() {
       var el = document.getElementById('tw');
@@ -1589,34 +1604,28 @@
 
     /* ===== Skills Data ===== */
     var skills = [
-      { name: 'Python', cat: 'lang', col: '#3b82f6', pct: 88 },
-      { name: 'SQL', cat: 'lang', col: '#06b6d4', pct: 80 },
-      { name: 'JavaScript', cat: 'lang', col: '#f59e0b', pct: 78 },
-      { name: 'Elixir', cat: 'lang', col: '#8b5cf6', pct: 65 },
-      { name: 'Computer Vision', cat: 'ai', col: '#10b981', pct: 82 },
-      { name: 'MediaPipe', cat: 'ai', col: '#10b981', pct: 80 },
-      { name: 'CNN', cat: 'ai', col: '#8b5cf6', pct: 78 },
-      { name: 'LSTM Network', cat: 'ai', col: '#8b5cf6', pct: 75 },
-      { name: 'Image Classification', cat: 'ai', col: '#8b5cf6', pct: 76 },
-      { name: 'Temporal Analysis', cat: 'ai', col: '#f59e0b', pct: 72 },
-      { name: 'Data Analytics', cat: 'analytics', col: '#10b981', pct: 85 },
-      { name: 'EDA', cat: 'analytics', col: '#10b981', pct: 88 },
-      { name: 'Data Visualization', cat: 'analytics', col: '#f43f5e', pct: 82 },
-      { name: 'Pandas', cat: 'analytics', col: '#8b5cf6', pct: 84 },
-      { name: 'Matplotlib', cat: 'analytics', col: '#f43f5e', pct: 80 },
-      { name: 'Power BI', cat: 'analytics', col: '#f59e0b', pct: 75 },
-      { name: 'HTML', cat: 'web', col: '#f43f5e', pct: 90 },
-      { name: 'CSS', cat: 'web', col: '#3b82f6', pct: 85 },
-      { name: 'n8n Workflows', cat: 'tools', col: '#06b6d4', pct: 80 },
-      { name: 'Groq API', cat: 'tools', col: '#06b6d4', pct: 75 },
-      { name: 'AWS Cloud', cat: 'tools', col: '#f59e0b', pct: 72 },
-      { name: 'Git / GitHub', cat: 'tools', col: '#06b6d4', pct: 82 },
-      { name: 'Problem Solving', cat: 'soft', col: '#10b981', pct: 90 },
-      { name: 'Communication', cat: 'soft', col: '#10b981', pct: 85 },
-      { name: 'Active Listening', cat: 'soft', col: '#10b981', pct: 88 },
-      { name: 'Team Work', cat: 'soft', col: '#10b981', pct: 90 },
-      { name: 'English', cat: 'soft', col: '#06b6d4', pct: 85, hideAll: true },
-      { name: 'Tamil', cat: 'soft', col: '#06b6d4', pct: 95, hideAll: true }
+        { name: 'Python', cat: 'lang', col: '#3b82f6', pct: 88 },
+        { name: 'Django', cat: 'web', col: '#10b981', pct: 84 },
+        { name: 'MySQL', cat: 'analytics', col: '#06b6d4', pct: 82 },
+        { name: 'JavaScript', cat: 'lang', col: '#f59e0b', pct: 78 },
+        { name: 'Machine Learning', cat: 'ai', col: '#f59e0b', pct: 78 },
+        { name: 'Deep Learning', cat: 'ai', col: '#f59e0b', pct: 78 },
+        { name: 'Elixir', cat: 'lang', col: '#8b5cf6', pct: 65 },
+        { name: 'EDA', cat: 'analytics', col: '#10b981', pct: 88 },
+        { name: 'Data Visualization', cat: 'analytics', col: '#f43f5e', pct: 82 },
+        { name: 'Pandas', cat: 'analytics', col: '#8b5cf6', pct: 84 },
+        { name: 'Matplotlib', cat: 'analytics', col: '#f43f5e', pct: 80 },
+        { name: 'HTML', cat: 'web', col: '#f43f5e', pct: 90 },
+        { name: 'CSS', cat: 'web', col: '#3b82f6', pct: 85 },
+        { name: 'n8n Workflows', cat: 'tools', col: '#06b6d4', pct: 80 },
+        { name: 'AWS Cloud', cat: 'tools', col: '#f59e0b', pct: 72 },
+        { name: 'Git / GitHub', cat: 'tools', col: '#06b6d4', pct: 82 },
+        { name: 'Problem Solving', cat: 'soft', col: '#10b981', pct: 90 },
+        { name: 'Communication', cat: 'soft', col: '#10b981', pct: 85 },
+        { name: 'Active Listening', cat: 'soft', col: '#10b981', pct: 88 },
+        { name: 'Team Work', cat: 'soft', col: '#10b981', pct: 90 },
+        { name: 'English', cat: 'soft', col: '#06b6d4', pct: 85, hideAll: true },
+        { name: 'Tamil', cat: 'soft', col: '#06b6d4', pct: 95, hideAll: true }
     ];
 
     function renderSkills(cat) {
@@ -1645,6 +1654,13 @@
     /* ===== Projects Data ===== */
     var projects = [
       {
+        cls: 'pb1', domain: 'Full-Stack · Django & MySQL', title: 'Conference Room Booking System',
+        desc: 'A full-featured conference room reservation platform featuring real-time availability checking, collision-free slot reservations, user authentication, and responsive management UI.',
+        metrics: [{ v: 'Django', l: 'Backend' }, { v: 'MySQL', l: 'Database' }],
+        tags: ['Python', 'Django', 'MySQL', 'Bootstrap', 'Full-Stack', 'HTML/CSS'],
+        link: 'https://github.com/Udhaya2208/django-conference-room-booking', cat: 'Full-Stack'
+      },
+      {
         cls: 'pb2', domain: 'Automation · AI Chatbot', title: 'WhatsApp ChatBot (n8n)',
         desc: 'Created a workflow-based AI chatbot integrating WhatsApp Webhooks, n8n automation, and Groq LLM API for real-time intelligent communication and responses.',
         metrics: [{ v: 'Real-time', l: 'Responses' }, { v: 'Groq', l: 'LLM API' }, { v: 'n8n', l: 'Workflow' }],
@@ -1652,28 +1668,28 @@
         link: 'https://github.com/Udhaya2208/n8n-whatsapp-automation', cat: 'Automation'
       },
       {
-        cls: 'pb1', domain: 'Mobile App · Material Design', title: 'My Material Application',
+        cls: 'pb3', domain: 'Mobile App · Material Design', title: 'My Material Application',
         desc: 'Implemented dynamic item categorization, real-time cart management, custom item addition, and searchable inventory features with Material Design principles.',
         metrics: [{ v: 'Dynamic', l: 'Categories' }, { v: 'Real-time', l: 'Cart' }, { v: 'Search', l: 'Inventory' }],
         tags: ['Mobile', 'Material Design', 'UI/UX', 'Inventory'],
         link: 'https://github.com/Udhaya2208/Material-app', cat: 'Mobile App'
       },
       {
-        cls: 'pb3', domain: 'AI / ML · Computer Vision', title: 'Real-Time Human Pose Correction',
+        cls: 'pb4', domain: 'AI / ML · Computer Vision', title: 'Real-Time Human Pose Correction',
         desc: 'Developed an intelligent fitness coaching system using MediaPipe, CNN/LSTM, and real-time skeletal tracking for accurate pose detection and correction feedback.',
         metrics: [{ v: 'Real-time', l: 'Tracking' }, { v: 'CNN+LSTM', l: 'Models' }, { v: 'MediaPipe', l: 'Framework' }],
         tags: ['Python', 'MediaPipe', 'CNN', 'LSTM', 'Computer Vision'],
         link: 'https://github.com/Udhaya2208/posecorrection', cat: 'AI / ML'
       },
       {
-        cls: 'pb4', domain: 'Mobile App · Environmental Tech', title: 'Predict O2-Vision',
+        cls: 'pb5', domain: 'Mobile App · Environmental Tech', title: 'Predict O2-Vision',
         desc: 'Developed a mobile application that scientifically estimates tree oxygen production by integrating camera measurements, device light sensors, and environmental data.',
         metrics: [{ v: 'Camera', l: 'Integration' }, { v: 'Sensors', l: 'Light Data' }, { v: 'O₂', l: 'Estimation' }],
         tags: ['Mobile', 'Camera API', 'Sensors', 'Environment', 'Science'],
         link: 'https://github.com/Udhaya2208/O2-Prediction', cat: 'Mobile App'
       },
       {
-        cls: 'pb5', domain: 'Full-Stack · AWS Cloud', title: 'Online Course Application',
+        cls: 'pb6', domain: 'Full-Stack · AWS Cloud', title: 'Online Course Application',
         desc: 'Designed and deployed a full-stack Online Course platform with AWS services, focusing on scalability, security and content delivery optimization.',
         metrics: [{ v: 'AWS', l: 'Services' }, { v: 'Scalable', l: 'Architecture' }, { v: 'CDN', l: 'Delivery' }],
         tags: ['AWS', 'Full-Stack', 'Cloud', 'Security', 'CDN'],
@@ -1713,7 +1729,8 @@
       { title: 'Online Course Application', date: '2024', desc: 'Designed and deployed a full-stack Online Course platform on AWS, focusing on scalability, security, and content delivery optimization.' },
       { title: 'Internship — Flash Infolabs', date: '2024', desc: 'Completed 1-month internship in AWS Cloud Engineering. Gained hands-on experience with cloud services, infrastructure, and deployment.' },
       { title: 'Built WhatsApp ChatBot & Material App', date: '2025', desc: 'Created workflow-based AI chatbot with n8n + Groq LLM API. Built My Material Application with dynamic item management.' },
-      { title: 'Real-Time Pose Correction & O2-Vision', date: '2026', desc: 'Developed AI-powered fitness coaching system using MediaPipe + CNN/LSTM. Created O2-Vision mobile app for tree oxygen estimation.' },
+      { title: 'Real-Time Human Pose Correction', date: '2026', desc: 'Developed an intelligent fitness coaching system and real-time skeletal tracking for accurate pose detection and correction feedback.' },
+      { title: 'Conference Room Booking & AI Pose System', date: '2026', desc: 'Developed full-stack Django + MySQL Conference Room Booking platform with collision detection, alongside AI-powered fitness pose tracking.' },
       { title: 'Graduated & Seeking Developer Roles', date: '2026', desc: 'Completed B.Tech in AI & Data Science. Actively seeking Software Developer, AI/ML Engineer, and Full-Stack positions. Open to full-time opportunities.' }
     ];
 
